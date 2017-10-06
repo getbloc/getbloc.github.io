@@ -9,11 +9,25 @@ Short intro to bloc. Lorem ipsum dolor sit amet, consectetur adipisicing elit, s
 # Team
 Intro to team. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-## Mats Julian Olsen
+<div class="team">
+  <div class="team-member">
+    <h2>Mats Julian Olsen</h2>
+    <p class="role">Club Mate Enthusiast</p>
+    <p class="mail"><a href="#">mats@getbloc.xyz</a></p>
+  </div>
 
-## Bjørn Rustad
+  <div class="team-member">
+    <h2>Bjørn Rustad</h2>
+    <p class="role">Data Scientist</p>
+    <p class="mail"><a href="#">bjorn@getbloc.xyz</a></p>
+  </div>
 
-## Leon Johannessen
+  <div class="team-member">
+    <h2>Leon Johannessen</h2>
+    <p class="role">UX Designer</p>
+    <p class="mail"><a href="#">leon@getbloc.xyz</a></p>
+  </div>
+</div>
 
 * * *
 

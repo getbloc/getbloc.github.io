@@ -353,3 +353,44 @@ a {
 .site-footer-credits {
   color: $blockquote-text-color;
 }
+
+.team {
+  display: flex;
+
+  .team-member {
+    flex: auto;
+  }
+
+  @include large {
+    & {
+      flex-direction: row;
+    }
+
+    .team-member {
+      width: 33%;
+    }
+  }
+
+  @include medium {
+    & {
+      flex-direction: row;
+    }
+
+    .team-member {
+      width: 33%;
+    }
+
+  }
+
+  @include small {
+    & {
+      flex-direction: column;
+
+    }
+    .team-member {
+      width: auto;
+    }
+
+  }
+
+}
