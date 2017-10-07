@@ -361,3 +361,7 @@ a:hover { text-decoration: underline; }
   #signup #mc-embedded-subscribe-form #mc-embedded-subscribe + .btn { margin-top: 1rem; margin-left: 0; } }
 #signup #mc-embedded-subscribe-form #mc-embedded-subscribe:hover { background: #f8e500; border-color: #f8e500; color: #242426; }
 #signup #mc-embedded-subscribe-form #mc-embedded-subscribe:focus, #signup #mc-embedded-subscribe-form #mc-embedded-subscribe:active { outline: none; background: #00087f !important; border-color: #00087f !important; color: white; }
+
+@keyframes blink { 50% { opacity: 0.0; } }
+@-webkit-keyframes blink { 50% { opacity: 0.0; } }
+.blink { animation: blink 1.5s step-start 0s infinite; -webkit-animation: blink 1.5s step-start 0s infinite; }
