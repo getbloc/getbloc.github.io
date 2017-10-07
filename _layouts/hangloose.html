@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    <meta charset="UTF-8">
+
+{% seo %}
+    <meta name="description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#00087f">
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <section class="page-header">
+      <img id="bloc-logo" src="/assets/img/bloc-logoblock.svg" onerror="this.onerror=null; this.src='bloc-logoblock.png'">
+      <div class="page-header-content">
+          <h1 class="project-name">Thank you <span class="hang-loose">🤙</span></h1>
+        <h2 class="project-tagline">&mdash;<br><span id="tagline">You've just signed up for the future.</h2>
+      </div>
+    </section>
+
+    <section class="main-content">
+      {{ content }}
+      <footer class="site-footer">
+        <span class="site-footer-credits">🙈 Bloc Bouldering AS, 2017.</span>
+    </section>
+
+    {% if site.google_analytics %}
+    <script type="text/javascript">
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '{{ site.google_analytics }}', 'auto');
+      ga('send', 'pageview');
+    </script>
+    {% endif %}
+  </body>
+</html>
