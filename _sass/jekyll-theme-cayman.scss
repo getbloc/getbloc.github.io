@@ -216,6 +216,11 @@ a {
   z-index: 2;
   word-wrap: break-word;
 
+  > p:first-of-type {
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+
   :first-child {
     margin-top: 0;
   }

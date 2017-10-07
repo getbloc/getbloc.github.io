@@ -286,6 +286,7 @@ a:hover { text-decoration: underline; }
 @media screen and (max-width: 42em) { .project-tagline { font-size: 1rem; } }
 
 .main-content { position: relative; z-index: 2; word-wrap: break-word; }
+.main-content > p:first-of-type { font-size: 1.3rem; font-style: italic; }
 .main-content :first-child { margin-top: 0; }
 @media screen and (min-width: 64em) { .main-content { max-width: 64rem; padding: 4rem 6rem; margin: 0 auto; font-size: 1.1rem; } }
 @media screen and (min-width: 42em) and (max-width: 64em) { .main-content { padding: 4rem; font-size: 1.1rem; } }
