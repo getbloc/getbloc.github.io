@@ -27,6 +27,7 @@
         <form
           action="//xyz.us16.list-manage.com/subscribe/post?u=44c038089473a79e2d32cf186&amp;id=b708711862"
           method="post"
+          onsubmit="trackFormSubmission()"
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
           class="validate"
@@ -41,7 +42,8 @@
             required>
           <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
           <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="text" name="b_44c038089473a79e2d32cf186_b708711862" tabindex="-1" value=""></div>
+            <input type="text" name="b_44c038089473a79e2d32cf186_b708711862" tabindex="-1" value="">
+          </div>
           <input
             type="submit"
             value="Get the beta"
@@ -65,23 +67,25 @@
       // smooth scroll, and scroll button tracker
       document.getElementById('cta-button').addEventListener('click', () => {
           smoothScroll(document.getElementById('preview-bloc-beta'), 500, 'easeOutQuad', () => {
-              // set focus to mail input field
               document.getElementById('mce-EMAIL').focus()
-
-              // send analytics event
               ga('send', 'event', 'button', 'clicked', 'clicked preview button');
             }
           )
         }
       );
 
+      function trackFormSubmission() {
+        ga('send', 'event', 'subscribe form', 'submit', 'clicked get the beta button');
+      }
+
+      /*
       // form submission tracker
       // Gets a reference to the form element, assuming
       // it contains the id attribute "signup-form".
       var subscribeForm = document.getElementById('mc-embedded-subscribe-form');
 
       // Adds a listener for the "submit" event.
-      subscribeForm.addEventListener('submit', () => {
+      subscribeForm.addEventListener('submit', function(event) {
 
         // Prevents the browser from submitting the form
         // and thus unloading the current page.
@@ -94,7 +98,7 @@
             subscribeForm.submit();
           }
         });
-      });
+      });*/
 
     </script>
 
