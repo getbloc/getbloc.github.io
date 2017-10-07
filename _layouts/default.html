@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="{{ site.lang | default: "en-US" }}">
   <head>
+      <!-- Google Analytics Content Experiment code -->
+      <script>function utmx_section(){}function utmx(){}(function(){var
+    k='161969970-0',d=document,l=d.location,c=d.cookie;
+    if(l.search.indexOf('utm_expid='+k)>0)return;
+    function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+        indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+        length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+    '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+    '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+    '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+        valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+        '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+      </script><script>utmx('url','A/B');</script>
+      <!-- End of Google Analytics Content Experiment code -->
+
     <meta charset="UTF-8">
 
 {% seo %}
@@ -14,8 +29,8 @@
       <img id="bloc-logo" src="/assets/img/bloc-logoblock.svg" onerror="this.onerror=null; this.src='bloc-logoblock.png'">
       <div class="page-header-content">
         <h1 class="project-name">Bouldering Reimagined</h1>
-        <h2 class="project-tagline">&mdash;<br>Finally a bouldering companion done right</h2>
-        <a href="#preview-bloc-beta" class="btn" id="cta-button">Preview the <strong>Bloc</strong> Beta</a>
+        <h2 class="project-tagline">&mdash;<br><span id="tagline"></h2>
+        <a href="#preview-bloc-beta" class="btn" id="cta-button"></a>
       </div>
     </section>
 
@@ -77,29 +92,20 @@
       function trackFormSubmission() {
         ga('send', 'event', 'subscribe form', 'submit', 'clicked get the beta button');
       }
-
-      /*
-      // form submission tracker
-      // Gets a reference to the form element, assuming
-      // it contains the id attribute "signup-form".
-      var subscribeForm = document.getElementById('mc-embedded-subscribe-form');
-
-      // Adds a listener for the "submit" event.
-      subscribeForm.addEventListener('submit', function(event) {
-
-        // Prevents the browser from submitting the form
-        // and thus unloading the current page.
-        event.preventDefault();
-
-        // Sends the event to Google Analytics and
-        // resubmits the form once the hit is done.
-        ga('send', 'event', 'subscribe form', 'submit', 'clicked get the beta button', {
-          hitCallback: function() {
-            subscribeForm.submit();
-          }
-        });
-      });*/
-
+    </script>
+    <script>
+        var params = (new URL(document.location)).searchParams;
+        var tagline = "";
+        var button = "";
+        if (params.get("variant") == 1) {
+            tagline = "We're hard at work developing our beta";
+            button = "Get the preview"
+        } else {
+            tagline = "Finally a bouldering companion done right";
+            button = "Preview the <strong>Bloc</strong> Beta"
+        }
+        document.getElementById('tagline').innerHTML = tagline;
+        document.getElementById('cta-button').innerHTML = button;
     </script>
 
     {% if site.google_analytics %}

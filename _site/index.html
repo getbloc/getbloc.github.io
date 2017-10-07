@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
+      <!-- Google Analytics Content Experiment code -->
+      <script>function utmx_section(){}function utmx(){}(function(){var
+    k='161969970-0',d=document,l=d.location,c=d.cookie;
+    if(l.search.indexOf('utm_expid='+k)>0)return;
+    function f(n){if(c){var i=c.indexOf(n+'=');if(i>-1){var j=c.
+        indexOf(';',i);return escape(c.substring(i+n.length+1,j<0?c.
+        length:j))}}}var x=f('__utmx'),xx=f('__utmxx'),h=l.hash;d.write(
+    '<sc'+'ript src="'+'http'+(l.protocol=='https:'?'s://ssl':
+    '://www')+'.google-analytics.com/ga_exp.js?'+'utmxkey='+k+
+    '&utmx='+(x?x:'')+'&utmxx='+(xx?xx:'')+'&utmxtime='+new Date().
+        valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
+        '" type="text/javascript" charset="utf-8"><\/sc'+'ript>')})();
+      </script><script>utmx('url','A/B');</script>
+      <!-- End of Google Analytics Content Experiment code -->
+
     <meta charset="UTF-8">
 
 <!-- Begin Jekyll SEO tag v2.3.0 -->
@@ -19,15 +34,15 @@
     <meta name="description" content="Bouldering Reimagined"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#00087f">
-    <link rel="stylesheet" href="/assets/css/style.css?v=76fc92a470efd41b48544006b89bce3f614d7669">
+    <link rel="stylesheet" href="/assets/css/style.css?v=029007382265da9421108e2893bd22b39f0e998e">
   </head>
   <body>
     <section class="page-header">
       <img id="bloc-logo" src="/assets/img/bloc-logoblock.svg" onerror="this.onerror=null; this.src='bloc-logoblock.png'">
       <div class="page-header-content">
         <h1 class="project-name">Bouldering Reimagined</h1>
-        <h2 class="project-tagline">&mdash;<br>Finally a bouldering companion done right</h2>
-        <a href="#preview-bloc-beta" class="btn" id="cta-button">Preview the <strong>Bloc</strong> Beta</a>
+        <h2 class="project-tagline">&mdash;<br><span id="tagline"></h2>
+        <a href="#preview-bloc-beta" class="btn" id="cta-button"></a>
       </div>
     </section>
 
@@ -37,25 +52,25 @@
 <hr />
 
 <h1 id="team">Team</h1>
-<p>Bloc is built by a team of machine learning experts and designers, Club Mate-enthusiasts and boulderers. Hard at work shaping the future.</p>
+<p>Bloc is built by a team of machine learning experts and designers, Club Mate-enthusiasts and boulderers — hard at work shaping the future.</p>
 
 <div class="team">
   <div class="team-member">
-    <img class="portrait" src="/assets/img/mats_portrait.jpg" alt="Portrait of Mats Julian Olsen" />
+    <img class="portrait" src="/assets/img/mats_portrait.jpg" alt="Club-Mate Enthusiast Mats Julian Olsen" />
     <h2>Mats Julian Olsen</h2>
     <p class="role">Machine Learning Engineer</p>
     <p class="mail"><a href="mailto:mats@getbloc.xyz">mats@getbloc.xyz</a></p>
   </div>
 
   <div class="team-member">
-    <img class="portrait" src="/assets/img/bjorn_portrait.jpg" alt="Portrait of Bjorn Rustad" />
+    <img class="portrait" src="/assets/img/bjorn_portrait.jpg" alt="Club-Mate Enthusiast Bjorn Rustad" />
     <h2>Bjørn Rustad</h2>
     <p class="role">Machine Learning Engineer</p>
     <p class="mail"><a href="mailto:mats@getbloc.xyz">bjorn@getbloc.xyz</a></p>
   </div>
 
   <div class="team-member">
-    <img class="portrait" src="/assets/img/leon_portrait.jpg" alt="Portrait of Leon Johannessen" />
+    <img class="portrait" src="/assets/img/leon_portrait.jpg" alt="Club-Mate Enthusiast and Chief Astronaut Leon Johannessen" />
     <h2>Leon Johannessen</h2>
     <p class="role">Industrial Design Engineer</p>
     <p class="mail"><a href="mailto:mats@getbloc.xyz">leon@getbloc.xyz</a></p>
@@ -123,29 +138,20 @@
       function trackFormSubmission() {
         ga('send', 'event', 'subscribe form', 'submit', 'clicked get the beta button');
       }
-
-      /*
-      // form submission tracker
-      // Gets a reference to the form element, assuming
-      // it contains the id attribute "signup-form".
-      var subscribeForm = document.getElementById('mc-embedded-subscribe-form');
-
-      // Adds a listener for the "submit" event.
-      subscribeForm.addEventListener('submit', function(event) {
-
-        // Prevents the browser from submitting the form
-        // and thus unloading the current page.
-        event.preventDefault();
-
-        // Sends the event to Google Analytics and
-        // resubmits the form once the hit is done.
-        ga('send', 'event', 'subscribe form', 'submit', 'clicked get the beta button', {
-          hitCallback: function() {
-            subscribeForm.submit();
-          }
-        });
-      });*/
-
+    </script>
+    <script>
+        var params = (new URL(document.location)).searchParams;
+        var tagline = "";
+        var button = "";
+        if (params.get("variant") == 1) {
+            tagline = "We're hard at work developing our beta";
+            button = "Get the preview"
+        } else {
+            tagline = "Finally a bouldering companion done right";
+            button = "Preview the <strong>Bloc</strong> Beta"
+        }
+        document.getElementById('tagline').innerHTML = tagline;
+        document.getElementById('cta-button').innerHTML = button;
     </script>
 
     
