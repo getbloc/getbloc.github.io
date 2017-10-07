@@ -548,15 +548,21 @@ a {
   }
 }
 
-@keyframes blink {
-  50% { opacity: 0.0; }
+@keyframes hangLoose {
+  50% { transform: rotate(-17deg); }
 }
-@-webkit-keyframes blink {
-  50% { opacity: 0.0; }
+@-webkit-keyframes hangLoose {
+  50% { -webkit-transform: rotate(-17deg); }
 }
-.blink {
-  animation: blink 1.5s step-start 0s infinite;
-  -webkit-animation: blink 1.5s step-start 0s infinite;
-}
+.hang-loose {
+  display: inline-block;
+  animation: hangLoose .5s step-start 0s infinite;
+  -webkit-animation: hangLoose .5s step-start 0s infinite;
 
-
+  &.delay {
+    animation-delay: 10s;
+    -webkit-animation-delay: 10s;
+    animation-iteration-count: 2;
+    -webkit-animation-iteration-count: 2;
+  }
+}
