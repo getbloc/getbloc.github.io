@@ -204,13 +204,13 @@ a {
 
   @include large {
     max-width: 64rem;
-    padding: 2rem 6rem;
+    padding: 4rem 6rem;
     margin: 0 auto;
     font-size: 1.1rem;
   }
 
   @include medium {
-    padding: 2rem 4rem;
+    padding: 4rem;
     font-size: 1.1rem;
   }
 
@@ -234,6 +234,7 @@ a {
     font-weight: bold;
     color: $section-headings-color;
   }
+
 
   p {
     margin-bottom: 1em;
@@ -366,7 +367,7 @@ a {
   hr {
     height: 2px;
     padding: 0;
-    margin: 1rem 0;
+    margin: 3rem 0;
     background-color: $hr-border-color;
     border: 0;
   }
@@ -401,9 +402,33 @@ a {
 
 .team {
   display: flex;
+  margin-top: 4rem;
 
   .team-member {
     flex: auto;
+
+    h2 {
+      color: $body-text-color;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0;
+      font-size: 1em;
+    }
+
+    .role {
+      margin: 0;
+    }
+
+    .mail a {
+      color: $body-text-color;
+      border-bottom: 2px solid $yellow;
+    }
+
+    .portrait {
+      width: 61.8%;
+      border-radius: 100%;
+      filter: grayscale(100%);
+    }
   }
 
   @include large {
@@ -428,7 +453,14 @@ a {
 
     .team-member {
       width: auto;
+      text-align: center;
+
+      & + .team-member {
+        margin-top: 2rem;
+      }
     }
+
+
 
   }
 
@@ -471,18 +503,21 @@ a {
     #mc-embedded-subscribe {
       @include button {}
 
-      background: $body-link-color;
-      border-color: darken($body-link-color, 2%);
+      background: lighten($body-link-color, 20%);
+      border-color: lighten($body-link-color, 10%);
+      color: $body-text-color;
 
       &:hover {
-        background: darken(saturate($body-link-color, 20%), 5%);
-        border-color: darken(saturate($body-link-color, 20%), 5%);
+        background: lighten($body-link-color, 10%);
+        border-color: lighten($body-link-color, 10%);
+        color: $body-text-color;
       }
 
       &:focus, &:active {
         outline: none;
         background: $intenseblue !important;
         border-color: $intenseblue !important;
+        color: white;
       }
 
     }

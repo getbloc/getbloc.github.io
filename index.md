@@ -11,18 +11,21 @@ Intro to team. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
 
 <div class="team">
   <div class="team-member">
+    <img class="portrait" src="/assets/img/mats_portrait.jpg" alt="Portrait of Mats Julian Olsen"/>
     <h2>Mats Julian Olsen</h2>
     <p class="role">Club Mate Enthusiast</p>
     <p class="mail"><a href="mailto:mats@getbloc.xyz">mats@getbloc.xyz</a></p>
   </div>
 
   <div class="team-member">
+    <img class="portrait" src="/assets/img/bjorn_portrait.jpg" alt="Portrait of Bjorn Rustad"/>
     <h2>Bjørn Rustad</h2>
     <p class="role">Data Scientist</p>
     <p class="mail"><a href="mailto:mats@getbloc.xyz">bjorn@getbloc.xyz</a></p>
   </div>
 
   <div class="team-member">
+    <img class="portrait" src="/assets/img/leon_portrait.jpg" alt="Portrait of Leon Johannessen"/>
     <h2>Leon Johannessen</h2>
     <p class="role">UX Designer</p>
     <p class="mail"><a href="mailto:mats@getbloc.xyz">leon@getbloc.xyz</a></p>
