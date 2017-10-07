@@ -33,7 +33,7 @@
       document.getElementById('cta-button').addEventListener('click', () => {
           smoothScroll(document.getElementById('preview-bloc-beta'), 500, 'easeOutQuad', () => {
               document.getElementById('mce-EMAIL').focus()
-              ga('send', 'event', 'button', 'clicked', 'User clicked get beta button');
+              ga('send', 'event', 'button', 'clicked');
             }
           )
         }
