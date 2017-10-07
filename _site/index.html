@@ -19,7 +19,7 @@
     <meta name="description" content="Bouldering Reimagined"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#00087f">
-    <link rel="stylesheet" href="/assets/css/style.css?v=81020f758ba0aec030f5094458aa98b9249ce38b">
+    <link rel="stylesheet" href="/assets/css/style.css?v=cdd54282a050027b63f521bf3a13d82721d923d1">
   </head>
   <body>
     <section class="page-header">
@@ -89,8 +89,10 @@
 
     <script src="/assets/js/scroll.js" type="text/javascript"></script>
     <script type="text/javascript">
-      document.getElementById('cta-button').addEventListener('click', () =>
-        smoothScroll(document.getElementById('preview-bloc-beta'), 500, 'easeOutQuad'));
+      document.getElementById('cta-button').addEventListener('click', () => {
+          smoothScroll(document.getElementById('preview-bloc-beta'), 500, 'easeOutQuad', () => document.getElementById('mce-EMAIL').focus())
+        }
+      );
     </script>
 
     
