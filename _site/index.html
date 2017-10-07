@@ -140,6 +140,14 @@
       }
     </script>
     <script>
+        setInterval(function() {
+            if (window.pageYOffset > 0.7 * window.innerHeight)
+                document.getElementById("bloc-logo").classList.add("inverted")
+            else 
+                document.getElementById("bloc-logo").classList.remove("inverted")
+        }, 100);
+    </script>
+    <script>
         var params = (new URL(document.location)).searchParams;
         var tagline = "";
         var button = "";

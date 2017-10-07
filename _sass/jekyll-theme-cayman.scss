@@ -159,13 +159,14 @@ a {
     padding: 2rem 1rem;
   }
 }
-
 #bloc-logo {
   position: fixed;
   left: 1rem;
   top: 1rem;
   width: 5rem;
-
+  &.inverted {
+    filter: invert(1);
+  }
   @include small {
     position: absolute;
     width: 4rem;
@@ -557,3 +558,5 @@ a {
   animation: blink 1.5s step-start 0s infinite;
   -webkit-animation: blink 1.5s step-start 0s infinite;
 }
+
+
