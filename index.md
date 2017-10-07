@@ -31,5 +31,36 @@ Intro to team. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do 
 
 * * *
 
-# Get updates
-Email harvester here
+# Preview Bloc Beta
+Bloc is currently in private beta. Do you want to experience the future of bouldering? Slip us your e-mail, and we'll send you a beta key when it's ready.
+
+<!-- Begin MailChimp Signup Form -->
+<div id="signup">
+  <form
+    action="//xyz.us16.list-manage.com/subscribe/post?u=44c038089473a79e2d32cf186&amp;id=b708711862"
+    method="post"
+    id="mc-embedded-subscribe-form"
+    name="mc-embedded-subscribe-form"
+    class="validate"
+    target="_blank"
+    novalidate>
+    <input type="email"
+      value=""
+      name="EMAIL"
+      class="email"
+      id="mce-EMAIL"
+      placeholder="email address"
+      required>
+      <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+      <input type="text" name="b_44c038089473a79e2d32cf186_b708711862" tabindex="-1" value=""></div>
+      <input
+        type="submit"
+        value="Get the beta"
+        name="subscribe"
+        id="mc-embedded-subscribe"
+        class="button">
+</form>
+</div>
+
+<!--End mc_embed_signup-->

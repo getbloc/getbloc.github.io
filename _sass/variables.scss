@@ -2,15 +2,25 @@
 $large-breakpoint: 64em !default;
 $medium-breakpoint: 42em !default;
 
+// Palette
+$darkblue: #000422;
+$mediumblue: #00024f;
+$intenseblue: #00087f;
+$darkred: #bc001f;
+$intensered: #ef0027;
+$yellow: #fff35f;
+$darkgrey: #242426;
+$mediumgrey: #1c1d25;
+
 // Headers
 $header-heading-color: #fff !default;
-$header-bg-color: #242426 !default;
+$header-bg-color: $darkgrey !default;
 $header-bg-color-secondary: #000422 !default;
 
 // Text
-$section-headings-color: #ed2a25 !default;
-$body-text-color: #1c1d25 !default;
-$body-link-color: #1c1d25 !default;
+$section-headings-color: $intensered !default;
+$body-text-color: $darkgrey !default;
+$body-link-color: darken($yellow, 30%) !default;
 $blockquote-text-color: #819198 !default;
 
 // Code
@@ -21,10 +31,3 @@ $code-text-color: #567482 !default;
 $border-color: #dce6f0 !default;
 $table-border-color: #e9ebec !default;
 $hr-border-color: #eff0f1 !default;
-
-// Palette
-// Dark blue      000422
-// Medium blue    00024f
-// Intense blue   00087f
-// Dark red       bc001f
-// Intense red    ef0027

@@ -45,6 +45,51 @@ a {
   }
 }
 
+@mixin button {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  + .btn {
+    margin-left: 1rem;
+  }
+
+  @include large {
+    padding: 0.75rem 1rem;
+  }
+
+  @include medium {
+    padding: 0.6rem 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  @include small {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+
+    + .btn {
+      margin-top: 1rem;
+      margin-left: 0;
+    }
+  }
+
+}
+
 .btn {
   display: inline-block;
   margin-bottom: 1rem;
@@ -362,9 +407,7 @@ a {
   }
 
   @include large {
-    & {
-      flex-direction: row;
-    }
+    & { flex-direction: row; }
 
     .team-member {
       width: 33%;
@@ -372,9 +415,7 @@ a {
   }
 
   @include medium {
-    & {
-      flex-direction: row;
-    }
+    & { flex-direction: row; }
 
     .team-member {
       width: 33%;
@@ -383,14 +424,67 @@ a {
   }
 
   @include small {
-    & {
-      flex-direction: column;
+    & { flex-direction: column; }
 
-    }
     .team-member {
       width: auto;
     }
 
   }
 
+}
+
+#signup {
+  width: 100%;
+
+  #mc-embedded-subscribe-form {
+    display: flex;
+
+    @include large  { & { flex-direction: row; } }
+    @include medium { & { flex-direction: row; } }
+    @include small  { & { flex-direction: column; } }
+
+    #mce-EMAIL {
+      @include button {}
+
+      border-color: lighten($mediumgrey, 50%);
+      color: lighten($body-text-color, 25%);
+
+      flex: 1;
+
+      @include large  { & { margin-right: 1em; } }
+      @include medium { & { margin-right: 1em; } }
+
+
+      &:hover {
+        border-color: darken($mediumgrey, 35%);
+        color: darken($body-text-color, 15%);
+      }
+
+      &:focus, &:active {
+        outline: none;
+        border-color: $intenseblue;
+        color: $intenseblue;
+      }
+    }
+
+    #mc-embedded-subscribe {
+      @include button {}
+
+      background: $body-link-color;
+      border-color: darken($body-link-color, 2%);
+
+      &:hover {
+        background: darken(saturate($body-link-color, 20%), 5%);
+        border-color: darken(saturate($body-link-color, 20%), 5%);
+      }
+
+      &:focus, &:active {
+        outline: none;
+        background: $intenseblue !important;
+        border-color: $intenseblue !important;
+      }
+
+    }
+  }
 }
