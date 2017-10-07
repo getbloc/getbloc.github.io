@@ -160,20 +160,31 @@ a {
   }
 }
 
+#bloc-logo {
+  position: fixed;
+  left: 1rem;
+  top: 1rem;
+  width: 5rem;
+}
+
 .project-name {
   margin-top: 0;
+  margin-top: 1em;
   margin-bottom: 0.1rem;
+  line-height: 1em;
 
   @include large {
-    font-size: 3.25rem;
+    font-size: 6rem;
+    max-width: 50vw;
   }
 
   @include medium {
-    font-size: 2.25rem;
+    font-size: 5rem;
+    max-width: 70vw;
   }
 
   @include small {
-    font-size: 1.75rem;
+    font-size: 3rem;
   }
 }
 
@@ -196,6 +207,8 @@ a {
 }
 
 .main-content {
+  position: relative;
+  z-index: 2;
   word-wrap: break-word;
 
   :first-child {
