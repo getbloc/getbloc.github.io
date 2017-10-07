@@ -1,9 +1,6 @@
 ---
-layout: default
+layout: hangloose 
 ---
 
-## Welcome to another page
+Follow us on
 
-_yay_
-
-[back](./)
