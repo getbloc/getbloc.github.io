@@ -2,7 +2,10 @@
 layout: default
 ---
 
-Bloc is a new platform for bouldering. It is reimagined and built from the ground up without the restraints of present solutions. Whether you're a publisher, pro climber or amateur rock-fiddler – meet Bloc – your future best friend.
+Bloc is a new platform for bouldering, built by a team of boulderers and technologists. We're taking a step back to rethink the way bouldering content is distributed digitally, specifically solving how writers and area developers can share and monetize their content, and how to better consume it on smartphones.
+
+It is reimagined and built from the ground up, free from the restraints of present solutions.
+Whether you're a publisher, pro climber or amateur rock-fiddler &mdash; meet Bloc &mdash; your future best friend.
 
 * * *
 
@@ -32,7 +35,9 @@ Bloc is built by a team of machine learning experts and designers, Club Mate-ent
   </div>
 </div>
 
+Bloc is supported by Innovation Norway.
+
 * * *
 
 # Preview Bloc Beta
-Bloc is currently in private beta. Do you want to experience the future of bouldering? Slip us your e-mail, and we'll send you a beta key when it's ready.
+Bloc is currently in private beta. Do you want to experience the future of bouldering? Slip us your e-mail, and we'll send you a beta key when it's ready (expect to hear from us in January).
