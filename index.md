@@ -2,15 +2,14 @@
 layout: default
 ---
 
-Bloc is a new platform for bouldering, built by a team of boulderers and technologists. We're taking a step back to rethink the way bouldering content is distributed digitally, specifically solving how writers and area developers can share and monetize their content, and how to better consume it on smartphones.
+Bloc is a new platform for bouldering, built by a team of boulderers and technologists. We're taking a step back to rethink the way bouldering content is distributed digitally, specifically solving how writers and area developers can share and monetize their content, and how we can better consume it on smartphones.
 
-It is reimagined and built from the ground up, free from the restraints of present solutions.
 Whether you're a publisher, pro climber or amateur rock-fiddler &mdash; meet Bloc &mdash; your future best friend.
 
 * * *
 
 # Team
-Bloc is built by a team of machine learning and UX design experts, Club Mate-enthusiasts and boulderers &mdash; hard at work shaping the future.
+Bloc is being built from the ground up by a team of machine learning and UX design experts, Club Mate-enthusiasts and boulderers &mdash; hard at work shaping the future of bouldering.
 
 <div class="team">
   <div class="team-member">
